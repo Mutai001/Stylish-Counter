@@ -1,0 +1,80 @@
+$primary-color: #4caf50;
+$secondary-color: #ff9800;
+$background-color: #f5f5f5;
+$font-family: 'Roboto, sans-serif';
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: $background-color;
+    font-family: $font-family;
+}
+
+.counter-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    h1 {
+        color: $primary-color;
+        margin-bottom: 20px;
+    }
+    .counter-display {
+        margin-bottom: 20px;
+        .counter-input {
+            width: 100px;
+            padding: 10px;
+            font-size: 24px;
+            text-align: center;
+            border: 2px solid $primary-color;
+            border-radius: 5px;
+            outline: none;
+        }
+    }
+    .counter-controls {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .counter-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background: $primary-color;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            &:hover {
+                background: darken($primary-color, 10%);
+            }
+            &:nth-child(2) {
+                background: $secondary-color;
+                &:hover {
+                    background: darken($secondary-color, 10%);
+                }
+            }
+            &:nth-child(3) {
+                background: lighten($primary-color, 10%);
+                &:hover {
+                    background: darken(lighten($primary-color, 10%), 10%);
+                }
+            }
+        }
+    }
+    .focus-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background: $secondary-color;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+        &:hover {
+            background: darken($secondary-color, 10%);
+        }
+    }
+}
